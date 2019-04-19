@@ -1,0 +1,11 @@
+[
+  {
+    "name_area": "IT",
+    "description": "projects in IT (python/bash scripts, docker, linux administration, firmware for MC, etc)"
+  },
+
+  {
+    "name_area": "Hradware",
+    "description": "PCB, electronic scheme development, etc"
+  }
+]

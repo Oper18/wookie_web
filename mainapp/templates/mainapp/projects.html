@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'mainapp/head_base.html' %}
+{% block sitebody %}
+ <h2>Projects</h2>
+ {% for a in area %}
+  <div class="block">
+   <div class="text">
+    <ul>
+     <li>{{ a.name_area }}</li>
+    </ul>
+   </div>
+  </div>
+ {% endfor %}
+{% endblock %}

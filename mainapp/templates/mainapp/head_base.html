@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+ <head>
+  <title>Wookie's technologies</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+ </head>
+ <body>
+  <header>
+   {% block login %}
+   {% if user.is_authenticated %}
+    <li>
+     <a href="{% url 'auth:edit' %}">
+      {{ user.username }}
+     </a>
+    </li>
+   <a href="{% url 'auth:logout' %}">Logout</a>
+   {% else %}
+    <a href="{% url 'auth:login' %}">Login</a>
+    <a href="{% url 'auth:register' %}">Registration</a>
+   {% endif %}
+   {% endblock %}
+   <h1>Wookie's technologies</h1>
+    {% block menu %}
+     <ul class="hr">
+      <li><a href="{% url 'main' %}">Home</a></li>
+      <li><a href="{% url 'projects:index' %}">Projects</a></li>
+      <li><a href="{% url 'contacts' %}">Contacts</a></li>
+     </ul>
+    {% endblock %}
+   </header>
+   {% block sitebody %}
+    <h2>Index</h2>
+   {% endblock %}
+ </body>
+</html>
+

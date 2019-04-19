@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Wookie's technologies</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+</head>
+<body>
+<div class="container">
+     <div class="login">
+        <div class="h2 text-center head">
+            Вход в систему
+        </div>
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
